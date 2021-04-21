@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.login.LoginFragment">
+
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.demirci.note.ui.login.LoginViewModel"/>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="32dp"
+            android:src="@drawable/note_256"
+            app:tint="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/outlinedTextFieldUsername"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="32dp"
+            android:hint="@string/hint_username"
+            app:errorTextColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textColorHighlight="@color/white"
+            app:hintTextColor="@color/white"
+            app:boxStrokeColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textCursorDrawable="@drawable/cursor"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/outlinedTextFieldPassword"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="@string/hint_password"
+            app:errorTextColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textColorHighlight="@color/white"
+            app:hintTextColor="@color/white"
+            app:boxStrokeColor="@color/white"
+            app:layout_constraintEnd_toEndOf="@+id/outlinedTextFieldUsername"
+            app:layout_constraintStart_toStartOf="@+id/outlinedTextFieldUsername"
+            app:layout_constraintTop_toBottomOf="@+id/outlinedTextFieldUsername">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textCursorDrawable="@drawable/cursor"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/checkBoxRememberMe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/remember_me"
+            android:textColor="@color/white"
+            app:buttonTint="@color/white"
+            app:useMaterialThemeColors="true"
+            app:layout_constraintStart_toStartOf="@+id/outlinedTextFieldUsername"
+            app:layout_constraintTop_toBottomOf="@+id/outlinedTextFieldPassword" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonSignIn"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/login"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="@+id/outlinedTextFieldUsername"
+            app:layout_constraintTop_toTopOf="@+id/checkBoxRememberMe"
+            app:strokeColor="@color/white" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonSignUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/sign_up"
+            app:strokeColor="@color/white"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            style="?attr/materialButtonOutlinedStyle"
+            app:layout_constraintStart_toStartOf="@+id/outlinedTextFieldUsername"
+            app:layout_constraintTop_toBottomOf="@+id/checkBoxRememberMe" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
