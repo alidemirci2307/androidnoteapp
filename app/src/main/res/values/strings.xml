@@ -11,8 +11,20 @@
     <string name="login_failed">"Login failed"</string>
     <string name="hint_username">Enter Your Username</string>
     <string name="hint_password">Enter Your Password</string>
+    <string name="hint_sign_up_username">Enter Username</string>
+    <string name="hint_sign_up_password">Enter Password</string>
+
+    <string name="hint_title">Enter Your Note Title</string>
+    <string name="hint_subtitle">Enter Your Note Subtitle</string>
+
     <string name="remember_me">Remember me</string>
     <string name="login">Login</string>
     <string name="redirect_login">Redirect to Login Page</string>
     <string name="sign_up">Sign Up</string>
+    <string name="note_add">Note Add</string>
+    <string name="back_button">Back</string>
+    <string name="note_update">Note Update</string>
+    <string name="touch_image">Touch image to choose picture</string>
+    <string name="note_added">Note added</string>
+    <string name="tap_to_close_app">Tap once more to close the app</string>
 </resources>

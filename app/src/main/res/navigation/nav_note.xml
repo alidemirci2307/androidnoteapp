@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/nav_note"
+    app:startDestination="@id/noteListFragment">
+
+    <fragment
+        android:id="@+id/noteListFragment"
+        android:name="com.demirci.note.ui.notelist.NoteListFragment"
+        android:label="NoteListFragment" >
+        <action
+            android:id="@+id/action_noteListFragment_to_noteAddFragment"
+            app:destination="@id/noteAddFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out"/>
+        <action
+            android:id="@+id/action_noteListFragment_to_noteUpdateFragment"
+            app:destination="@id/noteUpdateFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out"/>
+    </fragment>
+    <fragment
+        android:id="@+id/noteAddFragment"
+        android:name="com.demirci.note.ui.noteadd.NoteAddFragment"
+        android:label="NoteAddFragment" />
+    <fragment
+        android:id="@+id/noteUpdateFragment"
+        android:name="com.demirci.note.ui.noteupdate.NoteUpdateFragment"
+        android:label="NoteUpdateFragment" >
+        <argument
+            android:name="note"
+            app:argType="com.demirci.note.db.model.Note" />
+    </fragment>
+</navigation>

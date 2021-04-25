@@ -13,4 +13,15 @@
     <color name="theme_color_700">#04617A</color>
 
 
+
+
+
+
+
+    <color name="gray">#A5A5A5</color>
+    <color name="to_do">#BEDEF2</color>
+    <color name="done">#BFEABE</color>
+    <color name="being_done">#F0EFB0</color>
+
+
 </resources>

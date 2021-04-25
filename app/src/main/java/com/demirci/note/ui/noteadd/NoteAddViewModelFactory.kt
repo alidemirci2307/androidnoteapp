@@ -1,16 +1,16 @@
-package com.demirci.note.ui.login
+package com.demirci.note.ui.noteadd
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.demirci.note.db.repo.UserRepository
+import com.demirci.note.db.repo.NoteRepository
 
 
 // ViewModelFactory desenini kullandım. Çünkü constructer kullanmam gerekiyordu.
-class LoginViewModelFactory (private val userRepository: UserRepository) : ViewModelProvider.Factory {
+class NoteAddViewModelFactory (private val noteRepository: NoteRepository) : ViewModelProvider.Factory {
 
     override fun <T : ViewModel?> create(modelClass: Class<T>): T {
-        if (modelClass.isAssignableFrom(LoginViewModel::class.java)) {
-            return LoginViewModel(userRepository) as T
+        if (modelClass.isAssignableFrom(NoteAddViewModel::class.java)) {
+            return NoteAddViewModel(noteRepository) as T
         }
         throw IllegalArgumentException("Unknown ViewModel class")
     }

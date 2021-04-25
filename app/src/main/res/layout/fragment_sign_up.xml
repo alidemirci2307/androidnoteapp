@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".ui.login.LoginFragment">
-
     <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context=".ui.login.LoginFragment"
         android:id="@+id/container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -31,7 +30,7 @@
             android:layout_marginStart="32dp"
             android:layout_marginTop="32dp"
             android:layout_marginEnd="32dp"
-            android:hint="@string/hint_username"
+            android:hint="@string/hint_sign_up_username"
             app:errorTextColor="@color/white"
             android:textColorHint="@color/white"
             android:textColorHighlight="@color/white"
@@ -55,7 +54,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:hint="@string/hint_password"
+            android:hint="@string/hint_sign_up_password"
             app:errorTextColor="@color/white"
             android:textColorHint="@color/white"
             android:textColorHighlight="@color/white"
@@ -102,4 +101,3 @@
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-</layout>
